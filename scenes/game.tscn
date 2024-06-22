@@ -1,0 +1,176 @@
+[gd_scene load_steps=9 format=3 uid="uid://bjyhrabln3id5"]
+
+[ext_resource type="PackedScene" uid="uid://c3ogldiu3k2ly" path="res://scenes/paddle.tscn" id="1_38885"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_kakro"]
+[ext_resource type="PackedScene" uid="uid://c2mxcban2s4eq" path="res://scenes/ball.tscn" id="2_ptutc"]
+[ext_resource type="PackedScene" uid="uid://b61v1peqgvdie" path="res://scenes/red_brick.tscn" id="4_pggaj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eyrig"]
+size = Vector2(16, 1152)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sop3x"]
+size = Vector2(16, 1152)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2i1i"]
+size = Vector2(648, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlnkm"]
+size = Vector2(648, 16)
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_kakro")
+
+[node name="paddle" parent="." instance=ExtResource("1_38885")]
+position = Vector2(320, 960)
+
+[node name="Borders" type="StaticBody2D" parent="."]
+
+[node name="Left" type="CollisionShape2D" parent="Borders"]
+position = Vector2(-8, 576)
+shape = SubResource("RectangleShape2D_eyrig")
+
+[node name="Right" type="CollisionShape2D" parent="Borders"]
+position = Vector2(656, 576)
+shape = SubResource("RectangleShape2D_sop3x")
+
+[node name="Top" type="CollisionShape2D" parent="Borders"]
+position = Vector2(324, -8)
+shape = SubResource("RectangleShape2D_p2i1i")
+
+[node name="BallTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="Bricks" type="Node" parent="."]
+
+[node name="RedBrick" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(0, 168)
+
+[node name="RedBrick2" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(256, 168)
+
+[node name="RedBrick3" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(384, 168)
+
+[node name="RedBrick4" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(192, 168)
+
+[node name="RedBrick5" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(320, 168)
+
+[node name="RedBrick6" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(128, 168)
+
+[node name="RedBrick7" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(64, 168)
+
+[node name="RedBrick9" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(448, 168)
+
+[node name="RedBrick8" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(0, 192)
+
+[node name="RedBrick10" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(256, 192)
+
+[node name="RedBrick11" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(384, 192)
+
+[node name="RedBrick12" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(192, 192)
+
+[node name="RedBrick13" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(320, 192)
+
+[node name="RedBrick14" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(128, 192)
+
+[node name="RedBrick15" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(64, 192)
+
+[node name="RedBrick16" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(448, 192)
+
+[node name="RedBrick17" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(512, 168)
+
+[node name="RedBrick18" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(512, 192)
+
+[node name="RedBrick19" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(576, 168)
+
+[node name="RedBrick20" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(576, 192)
+
+[node name="RedBrick21" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(0, 216)
+
+[node name="RedBrick22" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(256, 216)
+
+[node name="RedBrick23" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(384, 216)
+
+[node name="RedBrick24" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(192, 216)
+
+[node name="RedBrick25" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(320, 216)
+
+[node name="RedBrick26" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(128, 216)
+
+[node name="RedBrick27" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(64, 216)
+
+[node name="RedBrick28" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(448, 216)
+
+[node name="RedBrick29" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(0, 240)
+
+[node name="RedBrick30" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(256, 240)
+
+[node name="RedBrick31" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(384, 240)
+
+[node name="RedBrick32" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(192, 240)
+
+[node name="RedBrick33" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(320, 240)
+
+[node name="RedBrick34" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(128, 240)
+
+[node name="RedBrick35" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(64, 240)
+
+[node name="RedBrick36" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(448, 240)
+
+[node name="RedBrick37" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(512, 216)
+
+[node name="RedBrick38" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(512, 240)
+
+[node name="RedBrick39" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(576, 216)
+
+[node name="RedBrick40" parent="Bricks" instance=ExtResource("4_pggaj")]
+position = Vector2(576, 240)
+
+[node name="KillZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(324, 1160)
+shape = SubResource("RectangleShape2D_tlnkm")
+
+[node name="Ball" parent="." instance=ExtResource("2_ptutc")]
+position = Vector2(312, 568)
+
+[connection signal="timeout" from="BallTimer" to="." method="_on_ball_timer_timeout"]
+[connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]
